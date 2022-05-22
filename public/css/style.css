@@ -8,8 +8,10 @@ body {
     background-image: url(/public/images/bg.jpg);
     background-size: cover;
     background-position: top center;
+    background-repeat: no-repeat;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
 .main {
@@ -126,6 +128,9 @@ nav a {
 
 
 @media (max-width: 850px) {
+    header {
+        margin: 20px 20px;
+    }
     .container {
         flex-direction: column;
     }
@@ -156,5 +161,42 @@ nav a {
         margin-left: 0;
         margin: 0 5px;
         height: 550px;
+    }
+}
+@media (max-width: 560px) {
+    nav {
+        display: none;
+    }
+    header .menu-icon {
+        display: block;
+        margin: 0 40px 0 0;
+    }
+    .content-area h1 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .content-area p {
+        margin: 0 20px;
+    }
+    .content-area .cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone-area {
+        margin: auto;
+        margin-top: 30px;
+    }
+    .phone-area .phone1 {
+        height: 300px;
+        position: relative;
+        margin-left: -70px;
+        z-index: 2;
+    }
+    .phone-area .phone2 {
+        height: 300px;
+        position: relative;
+        margin: -60px;
+        z-index: 1;
+        top: -70px;
     }
 }
